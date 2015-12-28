@@ -19,6 +19,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
+
 " Additional Snippets
 Plugin 'scrooloose/snipmate-snippets'
 Plugin 'rstacruz/vim-ultisnips-css'
@@ -29,6 +30,15 @@ Plugin 'jaxbot/browserlink.vim'
 " Vim Airline for cool status bar 
 Plugin 'bling/vim-airline'
 
+" Twig highlighting 
+Plugin 'beyondwords/vim-twig'
+
+" NERD Tree
+" Plugin 'scrooloose/nerdtree'
+
+" Plugin for commenting code blocks
+Plugin 'scrooloose/nerdcommenter'
+"
 " Syntax and indentation javascript 
 " Plugin 'jelera/vim-javascript-syntax'
 " Plugin 'vim-scripts/JavaScript-Indent'
@@ -90,6 +100,9 @@ filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
 set expandtab
+
+set undofile " Maintain undo history between sessions (persistent undo)
+set undodir=~/.vim/undodir
 
 " An example for a vimrc file.
 "
