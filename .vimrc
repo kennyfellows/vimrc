@@ -10,6 +10,8 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+" React JSX highlighting/indenting
+Plugin 'mxw/vim-jsx'
 
 " incremental search and highlighting
 Plugin 'haya14busa/incsearch.vim'
@@ -34,7 +36,8 @@ Plugin 'bling/vim-airline'
 Plugin 'beyondwords/vim-twig'
 
 " NERD Tree
-" Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Shougo/neocomplete.vim'
 
 " Plugin for commenting code blocks
 Plugin 'scrooloose/nerdcommenter'
@@ -66,6 +69,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'mileszs/ack.vim' " Fuzzy search plugin 
 Plugin 'scrooloose/syntastic' " Syntax checker plugin 
 Plugin 'wincent/command-t' " Fast file search plugin 
+let g:CommandTMaxFiles=50000
 
 " Html autocomplete 
 Plugin 'othree/html5.vim'
@@ -203,6 +207,9 @@ if !exists(":DiffOrig")
                 \ | wincmd p | diffthis
 endif
 
+" run neocomplete
+"let g:neocomplete#enable_at_startup = 1
+
 " Set mapleader key to the comma button
 let mapleader = ","
 
@@ -246,8 +253,8 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 "" Keep search matches in the middle of the window and pulse the line
-nnoremap n nzzzv:call PulseCursorLine()<cr>
-nnoremap N Nzzzv:call PulseCursorLine()<cr> 
+"nnoremap n nzzzv:call PulseCursorLine()<cr>
+"nnoremap N Nzzzv:call PulseCursorLine()<cr> 
 
 " Upon exiting VIM, open terminal and focus
 " autocmd VimLeave * :!open -a Terminal
